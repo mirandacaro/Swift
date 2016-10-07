@@ -15,11 +15,12 @@ class Alumno {
     var apellidos : String
     var matricula : String
     var carrera : String
-    
-    var materias : [Materia] // tiene un arreglo tipo materia
-    
+    var telefono : String?
+    var direccion : String?
     var foto : String?
     var imgFoto : UIImage?
+    
+    var materias : [Materia] // tiene un arreglo tipo materia
     
     init(nombre:String, apellidos: String, matricula: String, carrera: String){
         
@@ -38,6 +39,23 @@ class Alumno {
         self.apellidos = apellidos
         self.matricula = matricula
         self.carrera = carrera
+        
+        self.foto = foto
+        imgFoto = UIImage(named: foto)
+        
+        self.materias = []
+        
+    }
+    
+    
+    init(nombre:String, apellidos: String, matricula: String, carrera: String, foto: String, direccion: String, telefono: String){
+        
+        self.nombre = nombre
+        self.apellidos = apellidos
+        self.matricula = matricula
+        self.carrera = carrera
+        self.direccion = direccion
+        self.telefono = telefono
         
         self.foto = foto
         imgFoto = UIImage(named: foto)
